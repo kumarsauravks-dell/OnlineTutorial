@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Website Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profile_img">
+                    <img src="../_assets/images/saurav.jpg" alt="profile">
+                </div>
+                <h3>Kumar Saurav<br><span>Delhi, India</span></h3>
+            </div>
+            <div>
+                <img src="../_assets/images/InstagramWebsiteClone/dot.png" class="dot" alt="notification">
+            </div>
+        </div>
+        <div class="imgBx">
+            <img src="../_assets/images/InstagramWebsiteClone/bg.jpg" class="cover" alt="cover">
+        </div>
+        <div class="actionBtns">
+            <div class="left">
+                <img src="../_assets/images/InstagramWebsiteClone/heart.png" class="heart" alt="heart" onclick="likeButton()">
+                <img src="../_assets/images/InstagramWebsiteClone/comment.png" alt="comment">
+                <img src="../_assets/images/InstagramWebsiteClone/share.png" alt="share">
+            </div>
+            <div class="right">
+                <img src="../_assets/images/InstagramWebsiteClone/bookmark.png" alt="bookmark">
+            </div>
+        </div>
+        <h4 class="likes">320 likes</h4>
+        <h4 class="message"><b>kumarsaurav.ks</b> Thanks for your love and supports <span>#cards</span><span>#html</span>
+            <span>#css</span></h4>
+            <h4 class="comments">View all 22 comments</h4>
+            <div class="addComments">
+                <div class="userImg">
+                    <img src="../_assets/images/InstagramWebsiteClone/user.jpg" alt="user" class="cover">
+                </div>
+                <input type="text" class="text" placeholder="Add a comment...">
+            </div>
+            <h5 class="postTime">4 hours ago</h5>
+    </div>
+    <script>
+        function likeButton(){
+            let heart=document.querySelector('.heart');
+            let likes=document.querySelector('.likes');
+            if(heart.src.match("../_assets/images/InstagramWebsiteClone/heart.png")){
+                heart.src="../_assets/images/InstagramWebsiteClone/heart_red.png";
+                likes.innerHTML="321 likes"
+            }
+            else{
+                heart.src="../_assets/images/InstagramWebsiteClone/heart.png";
+                likes.innerHTML="320 likes"
+            }
+        }
+    </script>
+</body>
+</html>
